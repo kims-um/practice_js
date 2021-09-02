@@ -1,13 +1,15 @@
-class className {
-    constructor() {
-        this.age = 26;
-        this.hobby = "codding";
-    }
-
-    get_data() {
-        return "cool";
-    }
+class kims {
+  constructor(age) {
+    this.age = age;
+  }
 }
 
-const kims = new className();
-console.log(kims.get_data());
+class user extends kims {
+  constructor(age, brand) {
+    super(age);
+    this.brand = brand;
+  }
+}
+
+const cool = new user(26, "kims");
+console.log(cool.age);
