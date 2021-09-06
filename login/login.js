@@ -1,13 +1,11 @@
+const loginForm = document.querySelector(".form");
 const loginInput = document.querySelector(".form input");
-const loginButton = document.querySelector(".form button");
 
-function oneClickBtn() {
-  let username = loginInput.value;
-  if (username === "") {
-    alert("write, your name");
-  } else if (username.length > 4) {
-    alert("4글자 이하로 작성해주세요");
-  }
+function loginSubmit(event) {
+  event.preventDefault();
+  const username = loginInput.value;
+  loginForm.classList.add("hidden");
+  greeting.innerText = `hi ${username}`;
 }
 
-loginButton.addEventListener("click", oneClickBtn);
+loginForm.addEventListener("submit", loginSubmit);
